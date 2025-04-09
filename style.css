@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Dongle-lighter";
+    src: url("Dongle/Dongle-lighter.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-bold.ttf");
+}
+header{
+        display: flex;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(216, 92, 92, 0.874);
+        align-items: center;
+}
+.logo img{
+    max-width: 30%;
+}
+.nav-menu ul{
+   display: flex;
+}
+.nav-menu li{
+    align-items: right;
+    list-style: none;
+    margin-right: 20px;
+}
+.nav-menu li:last-child{
+    margin-right: 0;
+}
+.nav-menu a{
+    text-decoration: none;
+    font-family: "Dongle-bold";
+    font-size: 1.6rem;
+    color: #333;
+    transition: all ease 0.3s;
+}
+.nav-menu a:hover{
+    color: #fc6934;
+}
+.hero{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.hero-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.hero-content h1{
+    font-family: "Dongle-bold";
+    font-size: 4rem ;
+}
+.hero-content p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0f2d73f6;
+    padding: 12px 30px;
+    border-radius:  50px;
+    font-family: "Dongle-light";
+    font-size: 1.6rem;
+    transition: all ease 0.3s;
+}
+.hero-button:hover{
+    background-color: #f55e5e;
+}
+.destinations{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+}
+.destinations h2{
+    margin-bottom: 40px;
+}
+.destination-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+.destination-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.destination-item {
+     text-align: left;
+}
+.destination-item h3{
+    font-size: 2rem; 
+}
+.destination-item p{
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: "Dongle-regular";
+}
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Input fields */
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login button */
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+.about{
+    text-align: center;
+    padding: 100px;
+}
+.about h3{
+   font-family: "Dongle-bold";
+   font-size: 3rem;
+}
+.about p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+.contact{
+    padding: 80px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.contact h3{
+    font-family: "Dongle-bold";
+    font-size: 3rem;
+}
+.contact-info p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.contact-info ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+} 
+.contact-info li{
+    margin: 0 20px;
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+  
+}
+.contact-info li a{
+    text-decoration: none;
+    font-family: "Dongle-regular";
+    color: black;
+}
+.contact-info i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.form{
+    width: 100%;
+}
+input,textarea{
+    width: 70%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.1);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-family: "Dongle-regular";
+}
+textarea{
+    height: 200px;
+}
+.form button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff7f50;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: "Dongle-light";
+    font-size: 1.6rem;
+    border: none;
+    transition: all ease 0.3s;
+}
+.form button:hover{
+    background-color: #333;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+}
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+@media (max-width: 1177px) {
+    .hero-content h1{
+        line-height: 0.7;
+    }
+    .hero-content p{
+        margin-top: 0;
+        line-height: 0.8;
+    }
+    .destinations img{
+        height: 250px;
+    }
+    input, textarea{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .hero-content h1{
+        margin-bottom: 5px;
+    }
+    .team-member img{
+        width: 200px;
+        height: 200px;
+    }
+    .destination-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+}
+@media (max-width:603px){
+    .hero-content h1{
+        font-size: 2rem;
+    }
+    .hero-content p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:430px){
+    header{
+        display: none;
+    }
+    .hero-content h1{
+        font-size: 1.3rem;
+    }
+    .hero-content p{
+        font-size: 1rem;
+    }
+    .hero-button{
+        padding: 6px 22px;
+        font-size: 16px;
+    }
+    .destinations{
+        font-size: 1.5rem;
+    }
+    .destination-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+    .about{
+        padding: 0 30px;
+    }
+    .team-member img{
+        width: 250px;
+        height: 250px;
+    }
+}
+  
+ /* Chatbot */
+ #chatbot-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #008cba;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  #chatbot-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Chat Popup */
+  #chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  #chat-popup.hidden {
+    display: none;
+  }
+  
+ .chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: linear-gradient(to right, #ff7e5f, #6a11cb);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: white;
+  }
+  
+  .chatbot h2{
+    color: #50caec;
+    text-align: center;
+  }
+
+  #chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+  }
+  
+  .chatlog {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  
+  .msg {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .bubble {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+  
+  .avatar {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text p {
+    margin: 0;
+  }
+  
+  .timestamp {
+    font-size: 10px;
+    margin-top: 4px;
+    opacity: 0.7;
+  }
+  
+  input[type="text"] {
+    border: none;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+  
+  button {
+    background: #50caec;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #51abf5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .chatbot {
+      width: 90%;
+      right: 5%;
+    }
+  }
+  
+#chatbot-icon {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #008cba;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+#chatbot-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Packing List Icon */
+#packing-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #6750ff;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Avoid overlap */
+@media (max-width: 600px) {
+  #chatbot-icon, #packing-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+}
+
+/* Packing List Popup */
+#packing-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: none;
+    z-index: 999;
+}
+
+#packing-popup h3 {
+    font-family: "Dongle-bold";
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#packing-popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+#packing-popup li {
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+.popup-box.hidden {
+    display: none;
+}
+.popup-box {
+    display: block;
+}
+
+.popup-content .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: -10px;
+}
